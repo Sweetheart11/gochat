@@ -28,7 +28,7 @@ func NewDB() (*DB, error) {
 }
 
 func PostgresConnStr() (string, error) {
-	err := godotenv.Load(".env")
+	err := godotenv.Load("../.env")
 	if err != nil {
 		return "", fmt.Errorf("error loading .env file: %v\n", err)
 	}
